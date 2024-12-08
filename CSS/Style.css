@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-image: url('../Images/seamless-weather-forecast-background-vector-2000781.jpg');
+    background-repeat: repeat;
+}
+.my-border{
+  border-color: royalblue !important;
+  background-color: royalblue;
+}
+.my-border:hover{
+  border-color: midnightblue !important;
+  background-color: midnightblue;
+  transition: all 0.5s ease-in-out;
+}
+.my-border:hover a{
+  color: white;
+}
+.font-bokor{
+  font-family: "Bokor", system-ui;
+}
+.logo{
+  color: midnightblue;
+}
+.degree{
+  font-size: 60px;
+  vertical-align: super;
+}
+.custom-blur {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2em;
+	color: #fff;
+	text-transform: uppercase;
+	gap: 30px;
+}
+
+h1 {
+	font-size: 2.5em;
+	text-decoration: underline;
+	@media (max-width: 768px) {
+		font-size: 1.3em;
+	}
+}
+
+.text-shadow {
+	font-style: italic;
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-stroke: #fff;
+	-webkit-text-stroke-width: 1px;
+	text-shadow: 2px 2px 10px  midnightblue;
+	transition: all 0.5s ease-in-out;
+	text-align: center;
+	letter-spacing: 0.2em;
+	animation: flicker 0.5s ease-in-out infinite alternate;
+
+	&:hover {
+		color: #fff;
+	}
+}
+
+.tags small {
+	@media (max-width: 768px) {
+		font-size: 0.5em;
+	}
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 0.5;
+		text-shadow: 2px 2px 10px midnightblue;
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 2px 2px 20px midnightblue;
+	}
+}

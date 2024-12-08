@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="icon" href="./Images/4102326_cloud_sun_sunny_weather_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bokor&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Kablammo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/all.css">
+    <link rel="stylesheet" href="./CSS/Style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-primary-subtle opacity-75">
+        <div class="container">
+          <a class="navbar-brand fs-1 fw-bolder logo font-bokor" href="#"><i class="fa-solid fa-cloud-sun"></i>Weather App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item me-4 border border-5 rounded-5 my-border mb-2 text-center">
+                <a class="nav-link fw-bold" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item me-4 border border-5 rounded-5 my-border mb-2 text-center">
+                <a class="nav-link fw-bold" href="#">News</a>
+              </li>
+              <li class="nav-item me-4 border border-5 rounded-5 my-border mb-2 text-center">
+                <a class="nav-link fw-bold" href="#">Live Cameras</a>
+              </li>
+              <li class="nav-item me-4 border border-5 rounded-5 my-border mb-2 text-center">
+                <a class="nav-link fw-bold" href="#">Photos</a>
+              </li>
+              <li class="nav-item me-4 border border-5 rounded-5 my-border mb-2 text-center">
+                <a class="nav-link fw-bold" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+
+    <section class="mt-2">
+      <h1 class="text-shadow"> <i class="fa-solid fa-cloud-bolt"></i> Weather App <i class="fa-solid fa-cloud-bolt"></i> </h1>
+      <div class="tags">
+        <p class="text-shadow"><small>Don't be Surprised, be ready for theweather all the time!</small></p>
+      </div>
+    </section>
+
+
+    <div class="container mt-5">
+        <div class="input-group mb-3 w-50 w-sm-100 mx-auto">
+          <input id="search" type="text" class="form-control bg-primary-subtle" placeholder="Search for specific City" aria-label="Search for specific City" aria-describedby="button-addon2">
+          <button class="btn btn-primary" type="button" id="button-addon2">Find</button>
+        </div>
+      </div>
+      
+      
+
+  
+  <div class="container-fluid mt-5 d-flex flex-wrap gap-3 justify-content-center">
+    <div class="col-lg-3 col-md-12 col-12 custom-blur rounded-5 border border-3 ">
+      <div class="container-fluid d-flex justify-content-between pt-2">
+        <p id="dayName" class="font-bokor">Monday</p>
+        <p id="Month" class="font-bokor"><span id="dayNum"></span> </p>
+      </div>
+      <div>   
+        <h2 id="city" class="text-center mt-4 text-white font-bokor"></h2>
+        <h3 id="degree" class="degree mt-3 text-center text-white"><span class="fs-1">o</span>C</h3>
+        <div class="text-center"><img id="conditionPic" src="" class="w-25" alt=""></div>
+      </div>
+      <p id="conditionWord" class="mt-3 text-center">clear</p>
+      <div class="d-flex justify-content-evenly">
+        <p><i class="fa-solid fa-umbrella"></i> <span id="rain"></span>%</p>
+        <p><i class="fa-solid fa-wind"></i><span id="wind"></span>km/h</p>
+        <p><i class="fa-regular fa-compass"></i><span id="windDir"></span></p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-12 col-12 custom-blur rounded-5 border border-3 ">
+      <div class="container-fluid d-flex justify-content-between pt-2">
+        <p id="dayName2" class="font-bokor"></p>
+        <p id="Month2" class="font-bokor"></p>
+      </div>
+      <div>   
+        <h3 id="degreeMax2" class="degree mt-3 text-center text-white"></h3>
+        <h5 id="degreeMin2" class="mt-3 text-center text-white"></h5>
+        <div class="text-center"><img id="conditionPic2" src="" class="w-25" alt=""></div>
+      </div>
+      <p id="conditionWord2" class="mt-3 text-center">clear</p>
+      <div class="d-flex justify-content-evenly">
+        <p><i class="fa-solid fa-umbrella"></i><span id="rain2"></span>%</p>
+        <p><i class="fa-solid fa-wind"></i> <span id="wind2"></span>km/h</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-12 col-12 custom-blur rounded-5 border border-3 ">
+      <div class="container-fluid d-flex justify-content-between pt-2">
+        <p id="dayName3" class="font-bokor"></p>
+        <p id="Month3" class="font-bokor"></p>
+      </div>
+      <div>   
+        <h3 id="degreeMax3" class="degree mt-3 text-center text-white"></h3>
+        <h5 id="degreeMin3" class="mt-3 text-center text-white"></h5>
+        <div class="text-center"><img id="conditionPic3" src="" class="w-25" alt=""></div>
+      </div>
+      <p id="conditionWord3" class="mt-3 text-center">clear</p>
+      <div class="d-flex justify-content-evenly">
+        <p><i class="fa-solid fa-umbrella"></i><span id="rain3"></span>%</p>
+        <p><i class="fa-solid fa-wind"></i> <span id="wind3"></span>km/h</p>
+      </div>
+    </div>
+  </div>
+  
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/Index.js"></script>
+</body>
+</html>
